@@ -1,0 +1,144 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Lato, Hind, "Open Sans", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #3337de;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    1000px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$medium: 40.063em; // based on medium size from Foundation
+
+// Custom CSS
+
+.center { 
+    text-align: center; 
+}
+
+body { 
+    background-image: url('../assets/background2.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center 20% !important;
+}
+
+img.logo {
+    margin-top: 120px;
+    margin-bottom: 70px;
+}
+
+img.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.7));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+.home h1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 70px;
+    text-shadow: 0px 0px 30px #000, 0px 0px 80px #000;
+}
+
+//----------------------------
+// Form
+//----------------------------
+.submit-wrapper, .email-wrapper {
+    display: inline;
+    position: relative;
+}
+
+.thank-you-text::-webkit-input-placeholder {
+    color: $brand-color;
+}
+
+input.email,
+input.submit {
+    width: 100%;
+    border: none !important;
+    padding: 20px !important;
+    font-size: 1.5rem !important;
+    font-weight: 300;
+    font-family: $base-font-family !important;
+}
+
+input.email {
+    margin-bottom: 0px !important;
+    height: inherit !important;
+    
+    &:focus {
+        outline: none;
+        border: none !important;
+    }
+}
+
+input.submit {    
+    color: #fff;
+    background: #5656F5;
+    font-weight: 300;
+    width: 100% !important;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background: #4545c4;
+    }
+}
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .home h1 {
+        font-size: 2rem;
+    }
+    input.email {
+        width: 75% !important;
+        float: left;
+    }
+    input.submit {    
+        width: 25% !important;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
