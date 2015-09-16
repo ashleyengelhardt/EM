@@ -43,8 +43,8 @@ body {
 }
 
 img.logo {
-    margin-top: 120px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 img.shadowed {
@@ -55,7 +55,7 @@ img.shadowed {
 }
 
 .home h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 100;
     color: #fff;
     margin-bottom: 70px;
@@ -65,6 +65,11 @@ img.shadowed {
 //----------------------------
 // Form
 //----------------------------
+div.form {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .submit-wrapper, .email-wrapper {
     display: inline;
     position: relative;
@@ -122,6 +127,10 @@ input.submit {
 }
 
 @media screen and (min-width: $medium) {
+    img.logo {
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
     .home h1 {
         font-size: 2rem;
     }
