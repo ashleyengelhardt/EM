@@ -89,7 +89,7 @@ input.email,
 input.submit {
     width: 100%;
     border: none !important;
-    padding: 20px !important;
+    padding: 15px !important;
     font-size: 1.2rem !important;
     font-weight: 300;
     font-family: $base-font-family !important;
@@ -151,11 +151,13 @@ input.submit {
     }
     input.email {
         width: 75% !important;
+        padding: 20px !important;
         float: left;
         font-size: 1.5rem !important;
     }
     input.submit {    
         width: 25% !important;
+        padding: 20px !important;
         font-size: 1.5rem !important;
     }
 }
