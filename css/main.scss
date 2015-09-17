@@ -39,12 +39,18 @@ body {
     background-image: url('../assets/background2.jpg') !important;
     background-size: cover !important;
     background-repeat: no-repeat;
-    background-position: center 20% !important;
+    background-position: center top !important;
+}
+
+.wrapper {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 img.logo {
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    width: 80%;
 }
 
 img.shadowed {
@@ -127,12 +133,19 @@ input.submit {
 }
 
 @media screen and (min-width: $medium) {
+    body {
+        background-position: center 20% !important;
+    }
+    .wrapper {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
     img.logo {
-        margin-top: 120px;
-        margin-bottom: 70px;
+        margin-top: 80px;
+        margin-bottom: 50px;
     }
     .home h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     input.email {
         width: 75% !important;
