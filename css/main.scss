@@ -108,6 +108,8 @@ input.email {
 input.submit {    
     color: #fff;
     background: #5656F5;
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
     font-weight: 300;
     width: 100% !important;
     &:focus {
