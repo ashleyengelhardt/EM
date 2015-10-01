@@ -79,22 +79,17 @@ h1.construction {
 //----------------------------
 // Form
 //----------------------------
-div.form {
-    padding-left: 0px;
-    padding-right: 0px;
+
+
+#mc_embed_signup label {
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
-.submit-wrapper, .email-wrapper {
-    display: inline;
-    position: relative;
-}
-
-.thank-you-text::-webkit-input-placeholder {
-    color: $brand-color;
-}
-
-input.email,
-input.submit {
+#mc_embed_signup input.email,
+#mc_embed_signup input.button {
     width: 100%;
     border: none !important;
     padding: 15px !important;
@@ -103,7 +98,8 @@ input.submit {
     font-family: $base-font-family !important;
 }
 
-input.email {
+
+#mc_embed_signup input.email {
     margin-bottom: 0px !important;
     height: inherit !important;
     
@@ -113,11 +109,13 @@ input.email {
     }
 }
 
-input.submit {    
+
+input#mc-embedded-subscribe {    
     color: #fff;
     background: #5656F5;
     -webkit-transition: background 0.5s;
     transition: background 0.5s;
+    font-size: 1.2rem !important;
     font-weight: 300;
     width: 100% !important;
     &:focus {
@@ -127,6 +125,28 @@ input.submit {
         background: #4545c4;
     }
 }
+
+
+div.form {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/*
+.submit-wrapper, .email-wrapper {
+    display: inline;
+    position: relative;
+}
+*/
+
+/*
+.thank-you-text::-webkit-input-placeholder {
+    color: $brand-color;
+}
+*/
+
+
 
 
 // Using media queries with like this:
@@ -158,6 +178,16 @@ input.submit {
     .home h1 {
         font-size: 1.4rem;
     }
+    
+    #mc_embed_signup input.email {
+        width: 75%;
+        float: left;
+    }
+    
+    #mc_embed_signup input.button {
+        width: 25% !important;
+    }
+    /*
     input.email {
         width: 75% !important;
         padding: 20px !important;
@@ -169,6 +199,7 @@ input.submit {
         padding: 20px !important;
         font-size: 1.5rem !important;
     }
+    */
 }
 
 
