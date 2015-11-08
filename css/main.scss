@@ -227,7 +227,7 @@ footer.section {
 }
 
 .hero img.logo {
-	margin: 50px 0px;
+	margin: 30px 0px;
 	width: 80%;
 }
 
@@ -388,7 +388,7 @@ div.sticky + div {
 // Form
 //----------------------------
 #mc_embed_signup {
-	margin-top: $spacing-unit;
+	margin-top: 0;
 }
 
 #mc_embed_signup label {
@@ -406,6 +406,7 @@ div.sticky + div {
     font-size: 1.2rem !important;
     font-weight: 300;
     font-family: $base-font-family !important;
+	text-align: center;
 }
 
 
@@ -494,7 +495,12 @@ div.form {
 	}
 
 	.hero img.logo {
+		margin: 50px 0;
 		width: 50%;
+	}
+
+	#mc_embed_signup {
+		margin-top: $spacing-unit;
 	}
 
 	#mc_embed_signup label {
@@ -503,6 +509,7 @@ div.form {
 	}
 
 	#mc_embed_signup input.email {
+		text-align: left;
 		width: 65%;
 		float: left;
 	}
