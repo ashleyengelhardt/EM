@@ -4,17 +4,44 @@
   {% include head.html %}
 
   <body>
+	
+	
+	<div class="sticky contain-to-grid">
+	<nav class="top-bar" data-topbar>
+          <ul class="title-area">
+             
+            <li class="name">
+                <a href="{{ site.baseurl | append: '/' }}">
+                  <img src="{{ '/assets/logo-elemental-black.png' | prepend: site.baseurl }}" alt="Elemental Machines" />
+                </a>
+            </li>
+           
+          </ul>
+       
+          <section class="top-bar-section">
+             
+            <ul class="right">
+              <li class="hide-for-small-only">
+                <a class="button" href="{{ site.baseurl | append: '/jobs.html' }}">We're Hiring!</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+	
+	</div>
+	
+	
+	
+	
+	
+      {{ content }}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
+      {% include footer.html %}
+    
+    <script>
+      $(document).foundation();
+    </script>
+      
   </body>
 
 </html>

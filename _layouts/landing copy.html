@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/js/vendor/jquery.js"></script> 
+    <script src="{{ site.baseurl }}/js/foundation.min.js"></script> 
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+
+</html>

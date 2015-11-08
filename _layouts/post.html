@@ -1,15 +1,21 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="row section job-post">
+	<div class="row">
+		<div class="large-8 columns">
+			<header class="post-header">
+				<h1 class="post-title">{{ page.title }}</h1>
+				<p class="post-meta">{{ page.location }}</p>
+			</header>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+			<article class="post-content">
+				{{ content }}
+			</article>
+		</div>
+    <div class="large-4 columns callout">
+    	<h3>Interested?</h3>
+	  	<p>Send your cover letter and resume to jobs@elementalmachines.io.</p>
+    </div>
+  </div>
 </div>

@@ -15,11 +15,23 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #3337de;
+$brand-color:      #0085c8;
+$accent-color:     #0085c8;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+
+$gray-color-1: #9fa6ab;
+$gray-color-2: #2b2e36;
+$gray-color-3: #15181f;
+
+$blue-color-1: #00B8FF;
+$blue-color-2: #008fd5;
+$blue-color-3: #0072bc;
+$blue-color-4: #0054a6;
+$blue-color-5: #2125CC;
 
 // Width of the content area
 $content-width:    1000px;
@@ -27,27 +39,253 @@ $content-width:    1000px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+
 $medium: 40.063em; // based on medium size from Foundation
+$large: 62.5rem; // based on large size from Foundation
+
+$top-bar-color: rgba(255, 255, 255, 0);
+$top-bar-color-fixed: rgba(255, 255, 255, 1);
 
 // Custom CSS
+
+// Resets
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+	font-family: $base-font-family !important;
+}
 
 .center { 
     text-align: center; 
 }
 
 body { 
-    background-image: url('../assets/background2.jpg') !important;
+    /*background-image: url('../assets/background2.jpg') !important;
     background-size: auto 100% !important;
     background-repeat: no-repeat;
-    background-position: center top !important;
+    background-position: center top !important;*/
     font-family: $base-font-family !important;
+    color: #565D63 !important;
+    font-weight: 300 !important;
 }
 
-.wrapper {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+p {
+    font-weight: inherit;
 }
 
+.section {
+    max-width: 100%;
+    padding-top: $spacing-unit;
+}
+
+.section > .row {
+    max-width: $large;
+    margin: 0 auto;
+}   
+
+.full-width {
+    max-width: 100% !important;
+}
+
+.columns {
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+}
+
+//----------------------------
+// Top bar
+//----------------------------
+.contain-to-grid {
+  background: $top-bar-color;
+	transition: background 0.5s ease-out;
+	
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* controls top bar background spans to max width (default is set to 1000px) */
+.top-bar {
+  //background: $top-bar-color !important;
+	background: none;
+	//transition: background 0.5s ease-out;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 0;
+}
+
+/* controls the background of the right or left section where the nav links are */
+.top-bar-section .right,
+.top-bar-section .left {
+  //background: #ccc;
+}
+
+/* controls the backgrounds of the individual nav links */
+.top-bar-section .right li:not(.has-form) a:not(.button),
+.top-bar-section .left li:not(.has-form) a:not(.button) {
+  //background: #ccc;
+}
+
+/* controls the backgrounds of the nav links with active class */
+.top-bar-section .right li.active:not(.has-form) a:not(.button),
+.top-bar-section .left li.active:not(.has-form) a:not(.button) {
+  //background: #ccc;
+}
+
+.top-bar-section .right {
+	margin-top: 12px;
+	margin-right: $spacing-unit;
+}
+
+.top-bar.expanded .title-area {
+  //background: #ccc;
+}
+
+.contain-to-grid.fixed {
+	background: $top-bar-color-fixed;
+}
+
+.contain-to-grid.fixed .top-bar {
+	background: none;
+}
+
+.contain-to-grid.fixed .top-bar .top-bar-section .right {
+
+}
+
+.top-bar-section ul li {
+	background: none;
+}
+
+.top-bar-section ul li > a.button {
+	background: none;
+	border: 2px solid $blue-color-1;
+	color: $blue-color-1;
+	height: auto;
+	padding: 10px 15px;
+	text-transform: uppercase;
+}
+
+.top-bar-section ul li > a.button:hover {
+	text-decoration: none;
+	background: $blue-color-1;
+	color: #fff;
+}
+
+.top-bar img {
+  	width: 180px;
+	margin-top: 25px;
+	margin-left: 30px;
+}
+
+.top-bar .button {
+	
+}
+
+//----------------------------
+// Footer
+//----------------------------
+footer {
+    background: $gray-color-3;
+	color: #666;
+	text-align: center;
+}
+
+footer.section {
+	padding-top: calc(0.5*(#{$spacing-unit}));
+	padding-bottom: 0;
+}
+
+
+//----------------------------
+// Landing
+//----------------------------
+#landing .sticky img {
+	display: none;
+}
+
+#landing .sticky.fixed img {
+	display: block;
+}
+
+.hero {
+	background-image: url('../assets/background2.jpg') !important;
+	background-size: auto 100% !important;
+    background-repeat: no-repeat;
+    background-position: center top !important;
+	height: 100vh;
+	margin-top: -80px; // height of top bar
+	text-align: center;
+}
+
+.hero h1 {
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+.hero h2 {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.hero img.logo {
+	margin: 50px 0px;
+	width: 80%;
+}
+
+#join-us {
+	text-align: center;
+	background: $blue-color-1;
+}
+
+#join-us h3,
+#join-us h4 {
+	color: #fff;
+}
+
+#join-us h3 {
+	font-weight: 400;
+}
+
+#join-us h4 {
+	margin-bottom: 30px;
+}
+	
+#join-us a.button {
+	background: none;
+	border: 2px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#join-us a.button:hover {
+	text-decoration: none;
+	background: #fff;
+	color: $blue-color-1;
+}
+
+
+//----------------------------
+// Job postings
+//----------------------------
+ul.job-post-list {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+ul.job-post-list li {
+    padding: 30px 0px;
+    border-top: 1px solid #e5e5e5;
+}
+
+ul.job-post-list li h5.job-title,
+ul.job-post-list li p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+//////
+
+/*
 img.logo {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -60,32 +298,104 @@ img.shadowed {
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
+*/
 
-.home h1 {
-    font-size: 1.2rem;
-    font-weight: 100;
-    color: #fff;
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 30px #000, 0px 0px 80px #000;
-    font-family: $base-font-family !important;
-    
+
+
+
+
+
+
+
+//----------------------------
+// Top bar
+//----------------------------
+/* controls the background that spans full width of screen */
+
+
+
+//----------------------------
+// Jobs
+//----------------------------
+div.sticky + div {
+	
 }
 
-h1.construction {
-    font-size: 3rem !important;
-    margin-top: 30%;
+#jobs-intro {
+	background: #f5f5f5;
+	//color: #f5f5f5;
 }
+
+#jobs-intro h3,
+#open-positions h3 {
+	//color: #fff;
+	font-weight: 400;
+}
+
+#open-positions .columns {
+
+}
+#open-positions .columns.callout {
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	background: $blue-color-1;
+	color: #fff;
+}
+
+#open-positions > div.row > div:first-child > h3 {
+	margin-bottom: $spacing-unit;
+}
+
+#open-positions .job-title {
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+#open-positions .location {
+	font-size: 0.9rem;
+	color: $gray-color-1;
+}
+
+#open-positions a {
+	color: $blue-color-1;
+}
+
+#open-positions .columns.callout h3 {
+	color: #fff;
+}
+
+//----------------------------
+// Jobs post
+//----------------------------
+.job-post .columns.callout {
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	background: $blue-color-1;
+	color: #fff;
+}
+
+.job-post .columns.callout h3 {
+	color: #fff;
+	font-weight: 400;
+}
+
+.post-content h2 {
+	margin-top: $spacing-unit;
+}
+
 
 //----------------------------
 // Form
 //----------------------------
-
+#mc_embed_signup {
+	margin-top: $spacing-unit;
+}
 
 #mc_embed_signup label {
-    font-size: 1.4rem;
-    font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 300;
     color: #ffffff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #mc_embed_signup input.email,
@@ -112,7 +422,7 @@ h1.construction {
 
 input#mc-embedded-subscribe {    
     color: #fff;
-    background: #5656F5;
+    background: #2125CC;
     -webkit-transition: background 0.5s;
     transition: background 0.5s;
     font-size: 1.2rem !important;
@@ -126,25 +436,17 @@ input#mc-embedded-subscribe {
     }
 }
 
+input#mc-embedded-subscribe:hover {
+    background: #3539F9;	
+}
+
+
 
 div.form {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-
-/*
-.submit-wrapper, .email-wrapper {
-    display: inline;
-    position: relative;
-}
-*/
-
-/*
-.thank-you-text::-webkit-input-placeholder {
-    color: $brand-color;
-}
-*/
 
 
 
@@ -163,45 +465,73 @@ div.form {
 }
 
 @media screen and (min-width: $medium) {
-    body {
-        background-size: cover !important;
-        background-position: center 20% !important;
-    }
-    .wrapper {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    img.logo {
-        margin-top: 80px;
-        margin-bottom: 50px;
-    }
-    .home h1 {
-        font-size: 1.4rem;
-    }
-    
-    #mc_embed_signup input.email {
-        width: 75%;
-        float: left;
-    }
-    
-    #mc_embed_signup input.button {
-        width: 25% !important;
-    }
-    /*
-    input.email {
-        width: 75% !important;
-        padding: 20px !important;
-        float: left;
-        font-size: 1.5rem !important;
-    }
-    input.submit {    
-        width: 25% !important;
-        padding: 20px !important;
-        font-size: 1.5rem !important;
-    }
-    */
+	
+	.section {
+		max-width: 100%;
+		padding-top: calc(2*(#{$spacing-unit}));
+		padding-bottom: calc(2*(#{$spacing-unit}));
+	}
+
+	
+    //----------------------------
+	// Landing
+	//----------------------------
+	.hero {
+		background-image: url('../assets/background2.jpg') !important;
+		background-size: 100% auto !important;
+		background-repeat: no-repeat;
+		background-position: center 40% !important;
+		height: 100vh;
+		margin-top: -80px; // height of top bar
+		text-align: center;
+	}
+
+	.hero h1 {
+		font-size: 2.0rem;
+	}
+	.hero h2 {
+		font-size: 1.5rem;
+	}
+
+	.hero img.logo {
+		width: 50%;
+	}
+
+	#mc_embed_signup label {
+		font-size: 1.4rem;
+		margin-bottom: 30px;
+	}
+
+	#mc_embed_signup input.email {
+		width: 65%;
+		float: left;
+	}
+	#mc_embed_signup input.button {
+		width: 35% !important;
+	}
+
+	//----------------------------
+	// Jobs post
+	//----------------------------
+	div.job-post {
+		padding-bottom: 0;
+	}
+	div.job-post > div:first-child > div:first-child {
+		margin-bottom: $spacing-unit;
+	}
 }
 
+@media screen and (min-width: $large) {
+	//----------------------------
+	// Landing
+	//----------------------------
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+	.hero h2 {
+		font-size: 1.5rem;
+	}
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

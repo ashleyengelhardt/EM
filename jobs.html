@@ -1,0 +1,48 @@
+---
+layout: default
+---
+       
+<div id="jobs-intro" class="row section">
+    
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <h3>Want to change the face the laboratory?</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <p>Illum vivendum duo id, singulis complectitur est in. Nam erat mnesarchum posidonium ex, ornatus antiopam ei eos, te his aliquam detracto. An pro harum regione apeirian, vix illum noster fuisset ne. Id sit facete consequat voluptaria. Novum assentior cotidieque quo cu, ex quem quaestio patrioque eum.</p>
+        </div>
+        <div class="large-6 columns">
+            <p>Vim no illum salutandi, ex dicit consul has. Tale suas suscipiantur ex est, sed id dicta delenit, dicta iriure eam id. His primis postulant id. At usu ferri comprehensam, at pri facer scripta, docendi assentior ad mei. Eum ex vero petentium, in has tota consequuntur.</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="open-positions" class="row section">
+    
+    <div class="row">
+        <div class="large-8 columns">
+            <h3>Open positions</h3>
+            <ul class="job-post-list">
+                {% for post in site.posts %}
+                <li>
+                    <h5 class="job-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+					<p class="location">{{ post.location }}</p>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url | prepend: site.baseurl }}">Read more &#10142;</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="large-4 columns callout">
+            <h3>Interested?</h3>
+            <p>Send your cover letter and resume to jobs@elementalmachines.io.</p>
+        </div>
+    </div>
+    
+</div>
+
+       
+        
