@@ -198,13 +198,17 @@ footer.section {
 //----------------------------
 // Landing
 //----------------------------
-#landing .sticky img {
-	display: none;
+/*
+#landing .sticky {
+	visibility: hidden;
 }
+*/
 
+/*
 #landing .sticky.fixed img {
 	display: block;
 }
+*/
 
 .hero {
 	background-image: url('../assets/background2.jpg') !important;
@@ -227,7 +231,7 @@ footer.section {
 }
 
 .hero img.logo {
-	margin: 30px 0px;
+	margin: 20px 0px 30px 0px;
 	width: 80%;
 }
 
@@ -367,6 +371,18 @@ div.sticky + div {
 //----------------------------
 // Jobs post
 //----------------------------
+p.back {
+	margin-bottom: $spacing-unit;
+}
+
+p.back a {
+	color: $blue-color-1;
+}
+
+.section.job-post { 
+	padding-top: $spacing-unit;
+}
+
 .job-post .columns.callout {
 	padding-top: $spacing-unit;
 	padding-bottom: $spacing-unit;
@@ -477,6 +493,24 @@ div.form {
     //----------------------------
 	// Landing
 	//----------------------------
+
+	/*
+	#landing .sticky {
+		visibility: visible;
+	}
+	*/
+	#landing .top-bar-section ul li > a.button {
+		background: none;
+		border: 2px solid #fff;
+		color: #fff;
+	}
+
+	#landing .top-bar-section ul li > a.button:hover {
+		background: $blue-color-5;
+		border: 2px solid $blue-color-5;
+		color: #fff;
+	}
+
 	.hero {
 		background-image: url('../assets/background2.jpg') !important;
 		background-size: 100% auto !important;
@@ -515,6 +549,13 @@ div.form {
 	}
 	#mc_embed_signup input.button {
 		width: 35% !important;
+	}
+
+	//----------------------------
+	// Jop openings
+	//----------------------------
+	#open-positions {
+		padding-bottom: 0;
 	}
 
 	//----------------------------
