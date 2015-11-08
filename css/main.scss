@@ -76,6 +76,7 @@ p {
 .section {
     max-width: 100%;
     padding-top: $spacing-unit;
+	padding-bottom: calc(0.5*(#{$spacing-unit}));
 }
 
 .section > .row {
